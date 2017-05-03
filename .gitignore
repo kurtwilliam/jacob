@@ -1,0 +1,7 @@
+node_modules/
+public/styles/**/*.css
+public/scripts/**/*.js
+psdTemplate
+psdTemplate.zip
+assets/photos/
+apolo-template.zip

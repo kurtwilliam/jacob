@@ -1,0 +1,141 @@
+.options{
+	position: absolute;
+	left:7.8125%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	.heart{
+		font-size: 16.5px;
+	}
+	.fullscreen{
+		font-size: 18px;
+		padding:30px 0;
+	}
+	*{
+		margin:0;
+		padding:0;
+	}
+	.info {
+		position: relative;
+		height:20px;
+		width:20px;
+		border: 1px solid white;
+		border-radius: 50%;
+		i {
+			position: absolute;
+			left:50%;
+			top:50%;
+			transform: translate(-50%,-50%);
+		}
+	}
+	@media (max-width: 400px){
+		display: none;
+	}
+}
+
+.scroll{
+	position:absolute;
+	bottom:0;
+	left:50%;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	width:13px;
+	.mouse img{
+		width:12px;
+		height:auto;
+		margin-bottom:10px;
+	}
+	.line {
+		height:70px;
+		width:1px;
+		background: white;
+	}
+}
+
+.location{
+	display:flex;
+	flex-direction: column;
+	position: absolute;
+	right:7.8125%;
+	transition: all .2s ease-in-out;
+	.circle{
+		height:10px;
+		width:10px;
+		border: 1px solid white;
+		border-radius: 50%;
+		margin-bottom: 10px;
+		// transition: transform 2s ease-in-out 0;
+	}
+	.circle:hover{
+		transform: scale(1.1);
+	}
+	.circle5{
+		margin:0;
+	}
+	.circleFill{
+		background-color: white;
+	}
+	@media (max-width: 400px){
+		display: none;
+	}
+}
+
+.arrowLink {
+	margin-top: 150px;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-transform: uppercase;
+}
+
+.play {
+	width: 100px;
+	height:100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #6e6f71;
+	border-radius: 50%;
+	margin-top:30px;
+	transition: all .2s ease-in-out; 
+	.play2 {
+		width:80px;
+		height:80px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background:#9a9a9c;
+		border-radius: 50%;
+		.playTriangle {
+		  width: 0; 
+		  height: 0; 
+		  border-top: 11.547px solid transparent;
+		  border-bottom: 11.547px solid transparent;
+		  border-left: 20px solid white;
+		  transform: translateX(3px);
+		}
+	}
+}
+
+.play:hover{
+	transform: scale(1.2);
+}
+
+.photo{
+	background-color: #1d1e1f;
+	height:100vh;
+	width:100%;
+	color:white;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	a{
+		color:white;
+		text-decoration: none;
+	}
+}
+
+.photo2, .photo4 {
+	background-color: #2f3133;
+}
