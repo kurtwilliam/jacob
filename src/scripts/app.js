@@ -16,72 +16,38 @@ $(function() {
   });
 });
 
-// Hide and Show nav menu for responsive
-// Hide the nav bar if screen is small on start
-if($(window).width() < 830){
-  $( "nav" ).hide()
-} else {
-  $('nav').show()
-}
+  $(".piece").on('click', function(){
+    $(this).toggleClass('fullscreen');
+  })
 
-// Hide the nav bar if screen is small on resize
-$(window).resize(function(){
-  if($(window).width() < 830){
-    $( "nav" ).hide()
-  } else {
-    $('nav').show()
-  }
-});
+// ABOUT MODAL
 
-// hide X originally starting
-$( ".cross" ).hide();
-
-// show nav on click of hamburger at small screen size, hide hamburger and close X button to close
-$( ".hamburger" ).click(function() {
-  if ($(window).width() < 830) {
-    $( "nav" ).slideToggle( "slow", function() {
-      $( ".hamburger" ).hide();
-      $( ".cross" ).show();
-    })
-  }
+// On user button click show modal
+$('.fa-user-o').click(function(){
+  $('.about').css('display', 'block')
 })
 
-// hide nav on click of cross, hide cross and show hamburger
-$( ".cross" ).click(function() {
-  $( "nav" ).slideToggle( "slow", function() {
-    $( ".cross" ).hide();
-    $( ".hamburger" ).show();
-  });
-});
+// When user clicks X close modal
+$('.close').click(function(){
+  $('.about').css('display', 'none')
+})
 
-// Make HTML responsive when screen width is small for photo4 and photo5 text
+// When user clicks outside of modal close modal
 
-if($(window).width() < 500){
-  $('.photo4 h2').html('Water Fall');
-} else {
-  $('.photo4 h2').html('Waterfall');
-}
 
-$(window).resize(function(){
-  if($(window).width() < 500){
-    $('.photo4 h2').html('Water Fall');
-  } else {
-    $('.photo4 h2').html('Waterfall');
-  }
-});
+// // When the user clicks on <span> (x), close the modal
+// span.onclick = function() {
+//     modal.style.display = "none";
+// }
 
-if($(window).width() < 500){
-  $('.photo5 h2').html('The Wild Para- chute');
-} else {
-  $('.photo5 h2').html('The Wild Parachute');
-}
-
-$(window).resize(function(){
-  if($(window).width() < 500){
-    $('.photo5 h2').html('The Wild Para- chute');
-  } else {
-    $('.photo5 h2').html('The Wild Parachute');
-  }
-});
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//   if (event.target == about) {
+//     about.style.display = "none";
+//   }
+// }
 
 });
+
+
+
