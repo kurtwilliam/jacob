@@ -3,6 +3,11 @@ public/styles/**/*.css
 public/scripts/**/*.js
 psdTemplate
 psdTemplate.zip
-assets/photos/
+assets/Art/
+assets/Portrait/
+assets/Pet/
+assets/Adventure/
+assets/Landscape/
+assets/Wildlife/
 apolo-template.zip
 apolo/
