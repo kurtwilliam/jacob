@@ -22,8 +22,9 @@
 		</div><!-- /.container -->
 	</header>
 	<main id="top">
-		<div id="about" class="about">
-			<div class="aboutContent">
+		<section id="about" class="about">
+			<div id="aboutO" class="hidden"></div>
+			<div class="aboutContent hidden">
 				<span class="close">&times;</span>
 				<div class="aboutTop"></div>
 				<div class="aboutBottom">
@@ -33,29 +34,61 @@
 					<p class="website">Website built by <a href="http://www.kurtwilliam.com">Kurt</a></p>
 				</div>
 			</div>
-		</div>
+		</section>
 		<section class="portfolio">
+			<h2>Wildlife</h2>
 			<div class="pBG">
-				<div class="colF">
-					<img class="piece" src="assets/photos/DSC_0210-min.jpg" alt="Cute puppy">
-					<img class="piece" src="assets/photos/DSC_0002-min.jpg" alt="">
-					<img class="piece" src="assets/photos/DSC_0106-min.jpg" alt="">
-					<img class="piece" src="assets/photos/DSC_0848-min.jpg" alt="">
-					<img class="piece" src="assets/photos/DSC_5327-min.jpg" alt="">
+				<div class="col">
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/1.jpg" alt="">
+					</div>
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/2.jpg" alt="">
+					</div>
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/3.jpg" alt="">
+					</div>
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/4.jpg" alt="">
+					</div>
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/5.jpg" alt="">
+					</div>
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/12.jpg" alt="">
+					</div>
 				</div>
-				<div class="colF">
-					<img class="piece" src="assets/photos/DSC_4812-min.jpg" alt="Cute puppy">
-					<img class="piece" src="assets/photos/DSC_4879-min.jpg" alt="">
-					<img class="piece" src="assets/photos/DSC_5163-min.jpg" alt="">
-					<img class="piece" src="assets/photos/DSC_0852-min.jpg" alt="">
-					<img class="piece" src="assets/photos/DSC_5352-min.jpg" alt="">
-				</div>
-				<div class="colF">
-					<img class="piece" src="assets/photos/DSC_5455-min.jpg" alt="Cute puppy">
-					<img class="piece" src="assets/photos/DSC_5615-min.jpg" alt="">
-					<img class="piece" src="assets/photos/DSC_5970-min.jpg" alt="">
-					<img class="piece" src="assets/photos/DSC_6760-min.jpg" alt="">
-					<img class="piece" src="assets/photos/DSC_8477-min.jpg" alt="">
+				<div class="col">
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/6.jpg" alt="">
+					</div>
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/7.jpg" alt="">
+					</div>
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/8.jpg" alt="">
+					</div>
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/9.jpg" alt="">
+					</div>
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/10.jpg" alt="">
+					</div>
+					<div class="img-w">
+						<div class="imgO"></div>
+						<img src="assets/wildlife/11.jpg" alt="">
+					</div>
 				</div>
 			</div>
 		</section>
@@ -72,16 +105,18 @@
 			<div class="fRight">
 				<p class="contactMe">Contact me!</p>
 				<p>jacob.matikainen@gmail.com</p>
-				<form action="">
+				<form action="https://formspree.io/jacob.matikainen@outlook.com"
+			      method="POST">
 					<div>
 						<input type="text" placeholder="Name" name="name" required>
 						<input type="email" placeholder="Email" name="email" required>
 					</div>
 					<textarea name="message" id="" placeholder="How can I help?" required></textarea>
-					<input type="submit" value="Send Jacob an Email" class="submit">
+					<input type="submit" value="Send Jacob an Email" class="submit" name="submit">
 				</form>
 			</div>
 		</div>
+	</footer>
 	</footer>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	<script src="public/scripts/app.js"></script>

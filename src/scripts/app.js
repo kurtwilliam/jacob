@@ -23,35 +23,52 @@ $(".piece").on('click', function(){
 // ABOUT MODAL
 
 // On user button click show modal
-$('.fa-user-o').click(function(){
-  $('.about').css('display', 'block')
+$('.fa-user-o').click(function(e){
+  e.preventDefault();
+  $('.aboutContent').removeClass('hidden')
+  $('#aboutO').removeClass('hidden')
 })
 
 // When user clicks X close modal
 $('.close').click(function(){
-  $('.about').css('display', 'none')
+  $('.aboutContent').addClass('hidden')
+  $('#aboutO').addClass('hidden')
 })
 
 // When user clicks outside of modal close modal
+$('#aboutO').click(function(){
+  $('.aboutContent').addClass('hidden')
+  $('#aboutO').addClass('hidden')
+})
 
+// PORTFOLIO IMG FULLSCREEN
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == about) {
-    about.style.display = "none";
+// Depending on img height and width, add the appropriate class to make img and overlay full screen
+$('.img-w img').click(function(){
+  if ($(this).height() > $(this).width()) {
+    if ($(this).hasClass('fullscreenH')){
+      $(this).removeClass('fullscreenH')
+      $(this).siblings().removeClass('fullscreen')
+    } else {
+      $(this).addClass('fullscreenH')
+      $(this).siblings().addClass('fullscreen')
+    }
+  } else {
+    if ($(this).hasClass('fullscreenW')){
+      $(this).removeClass('fullscreenW')
+      $(this).siblings().removeClass('fullscreen')
+    } else {
+      $(this).addClass('fullscreenW')
+      $(this).siblings().addClass('fullscreen')
+    }
   }
-}
-
 });
 
-
-
-
+// If user clicks on the overlay, make the image not full screen
+$('.imgO').click(function(){
+  $('.imgO').removeClass('fullscreen')
+  $(this).siblings().removeClass('fullscreenH fullscreenW')
+})
 
 
 // $(function() {
@@ -61,7 +78,6 @@ window.onclick = function(event) {
 //      $(this).css('background-image', 'url(' + imgSrc + ')');
 //   })
             
-  
 //   $(".img-c").click(function() {
 //     let w = $(this).outerWidth()
 //     let h = $(this).outerHeight()
@@ -81,7 +97,6 @@ window.onclick = function(event) {
     
 //   }) 
   
-  
 // })
 
 // $(document).on("click", ".img-c.active", function() {
@@ -91,3 +106,5 @@ window.onclick = function(event) {
 //     copy.remove();
 //   }, 500)
 // })
+
+});
